@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+background-color: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
+}
+
+h1 {
+margin: 0;
+}
+
+main {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+#scrapbook {
+width: 80%;
+height: 100%;
+}
+
+.page {
+background-color: #fff;
+width: 300px;
+height: 400px;
+margin: 20px;
+padding: 20px;
+box-shadow: 0 0 10px #ccc;
+overflow: hidden;
+}
+
+.content img {
+width: 100%;
+height: auto;
+}
+
+.content p {
+margin: 10px 0;
+font-size: 14px;
+}
+  
