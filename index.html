@@ -10,16 +10,25 @@
 <body>
     <header>
         <h1>Digital Scrapbook</h1>
+        <button class="btn add-scrapbook">Add New Scrapbook</button>
     </header>
     <main>
-        <div id="scrapbook">
-          <div class="page">
-            <div class="content">
-              <img src="image.jpg" alt="image">
-              <p>Add your text here</p>
-            </div>
-          </div>
+    <div id="scrapbook">
+        <div class="page">
+        <div class="content">
+            <img src="image.jpg" alt="image">
+            <p>Add your text here</p>
         </div>
+        </div>
+        <div class="page add-page">
+        <form class="add-form" id="add-form">
+            <input type="text" placeholder="Scrapbook Title" name="title">
+            <input type="file" name="image" accept="image/*">
+            <textarea placeholder="Add a description" name="description"></textarea>
+            <button class="btn submit-form">Create Scrapbook</button>
+        </form>
+        </div>
+    </div>
     </main>
 </body>
 </html>
