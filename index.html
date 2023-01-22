@@ -4,31 +4,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrapbook</title>
+    <title>Scrappy | Digital Scrapbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Digital Scrapbook</h1>
-        <button class="btn add-scrapbook">Add New Scrapbook</button>
-    </header>
-    <main>
-    <div id="scrapbook">
-        <div class="page">
-        <div class="content">
-            <img src="image.jpg" alt="image">
-            <p>Add your text here</p>
-        </div>
-        </div>
-        <div class="page add-page">
-        <form class="add-form" id="add-form">
-            <input type="text" placeholder="Scrapbook Title" name="title">
-            <input type="file" name="image" accept="image/*">
-            <textarea placeholder="Add a description" name="description"></textarea>
-            <button class="btn submit-form">Create Scrapbook</button>
-        </form>
+    <div class="container">
+        <!-- Header section  -->
+        <header>
+            <nav>
+                <a href="#"><img src="assets/images/logo_black.png" class="logo" alt="logo"></a>
+                <ul>
+                    <li><a href="#themes-section">Themes</a></li>
+                    <li><a href="#features">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Main section  -->
+        <main>
+            <div class="text-box">
+                <p>Preserve your memories in</p>
+                <h1>SCRAPPY</h1>
+                <h3>A personalised digital scrapbook, where creativity and community come together.</h3>
+                <div class="row">
+                    <a href="#themes-section">Explore Themes</a>
+                    <a href="#features">Know About Us</a>
+                    <span>Unlock a world of creative possibilities and <br>discover more about Scrappy here.</span>
+                </div>
+            </div>
+        </main>
+        <!-- logos section  -->
+        <div class="social-icons">
+            <a href="https://t.me/Tapas_20" target="_blank"><img src="assets/logos/telegram.png" alt="Telegram logo"></a>
+            <a href="https://github.com/tapas-code" target="_blank"><img src="assets/logos/github.png" alt="Github logo"></a>
+            <a href="https://www.instagram.com/cinechrons/" target="_blank"><img src="assets/logos/instagram.png" alt="Instagram logo"></a>
         </div>
     </div>
-    </main>
+    <div id="themes-section">
+        <h1>Available Themes</h1>
+        <div id="all-themes">
+                <div id="best-friend-theme">
+                    <a href="https://www.canva.com/design/DAFYZxpQjV0/43-OPhpcClpnyoq8dIAo9g/view?utm_content=DAFYZxpQjV0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank"><img src="assets/images/friend-theme.png" alt="Best Friend Theme"></a>
+                    <div class="overlay">
+                        <p>Click to use this Friends theme</p>
+                    </div>
+                </div>
+                <div id="travel-theme">
+                    <a href="https://www.canva.com/design/DAFYSTnTkwY/lAGxGejjZDCALqLUx_U5OA/view?utm_content=DAFYSTnTkwY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank"><img src="assets/images/travel-theme.png" alt="Travel Theme"></a>
+                    <div class="overlay">
+                        <p>Click to use this Travel theme</p>
+                    </div>
+                </div>
+                <div id="season-theme">
+                    <a href="https://www.canva.com/design/DAFYZ0UK9fA/6xmLj5SR8KBlbNDZmFuZzw/view?utm_content=DAFYZ0UK9fA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank"><img src="assets/images/season-theme.png" alt="Season Theme"></a>
+                    <div class="overlay">
+                        <p>Click to use this Season theme</p>
+                    </div>
+                </div>
+        </div>
+        <div id="more-themes">
+            <div id="beach-theme">
+                <a href="https://www.canva.com/design/DAFYZ0UK9fA/6xmLj5SR8KBlbNDZmFuZzw/view?utm_content=DAFYZ0UK9fA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank"><img src="assets/images/beach-theme.png" alt="beach Theme"></a>
+                <div class="overlay">
+                    <p>Click to use this Beach theme</p>
+                </div>
+            </div>
+            <div id="pet-theme">
+                <a href="https://www.canva.com/design/DAFYZxpQjV0/43-OPhpcClpnyoq8dIAo9g/view?utm_content=DAFYZxpQjV0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank"><img src="assets/images/pet-theme.png" alt="Pet Theme"></a>
+                <div class="overlay">
+                    <p>Click to use this Pet theme</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <section id="features">
+        <h2>What is Scrappy?</h2>
+        <p>Scrappy is a website that allows users to create and share their digital scrapbooking projects. With its user-friendly interface and easy-to-use tools, Scrappy makes it simple for anyone to create beautiful, personalized scrapbooks to treasure their memories.</p>
+        <div class="feature-container">
+            <div class="feature">
+            <img src="assets/images/themes.png" alt="Themes">
+            <h3>Variety of themes and templates</h3>
+            <p>Scrappy offers a variety of themes and templates to choose from, allowing users to customize the look and feel of their scrapbooks to match their personal style.</p>
+            </div>
+            <div class="feature">
+            <img src="assets/images/community.jpg" alt="Community">
+            <h3>Community aspect</h3>
+            <p>Scrappy has a community aspect where users can share their scrapbooks with friends and family and discover inspiration from other users' projects.</p>
+            </div>
+            <div class="feature">
+            <img src="assets/images/interactive.jpg" alt="Interactive">
+            <h3>Interactive features</h3>
+            <p>Scrappy offers a variety of interactive features, such as the ability to add videos and audio recordings to scrapbook pages, making it easy to capture the full story of a memory.</p>
+            </div>
+            <div class="feature">
+            <img src="assets/images/storage.jpg" alt="Storage">
+            <h3>Safe and Secure storage</h3>
+            <p>Scrappy offers a safe and secure way to store your memories, all of your Scrapbooks are saved in the cloud, so you can access them from anywhere, and you can also export your scrapbook as PDF, PNG or JPG.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container1">
+          <nav>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </nav>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p>Copyright &copy; 2022 Scrappy</p>
+        </div>
+    </footer>        
 </body>
 </html>

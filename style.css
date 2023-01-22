@@ -1,115 +1,318 @@
-body {
-    font-family: 'Open Sans', sans-serif;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-header {
-background-color: #333;
-color: #fff;
-padding: 20px;
-text-align: center;
-position: relative;
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(transparent, #ffffff9e),url("assets/images/scrap-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 0 4%;
+    position: relative;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
 }
 
-h1 {
-margin: 0;
-font-size: 2rem;
-font-weight: 300;
+.logo{
+    width: 160px;
+    cursor: pointer;
 }
 
-.btn {
-background-color: #4CAF50;
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 32px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after{
+    width: 50%;
+}
+
+.text-box{
+    color: black;
+    position: absolute;
+    bottom: 8%;
+}
+
+.text-box p{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.text-box h1{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    background: url("assets/images/back.png");
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.text-box h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.text-box .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.text-box a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid black;
+}
+
+.social-icons{
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+
+.social-icons img{
+    width: 25px;
+    display: block;
+    margin: 25px 5px;
+}
+#know-more h1{
+    margin-top: 40px;
+}       
+
+footer div a img:hover{
+    transform: scale(1.2);
+}
+#themes-section h1{
+    text-align: center;
+    font-size: 40 px;
+    margin-top: 20px;
+}
+#all-themes{
+    display: flex;
+    margin: 10px 20px;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+#more-themes{
+    display: flex;
+    margin: 10px 20px;
+    padding: 20px;
+    justify-content: center;
+}
+#all-themes img{
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+}
+#more-themes img{
+    width: 400px;
+    height: 300px;
+    margin: 10px 32px;
+}
+
+#all-themes img:hover,
+#more-themes img:hover{
+    transform: scale(0.95);
+    transition: .3s ease;
+}
+
+#best-friend-theme{
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5); /* change the color and opacity as per requirement */
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 4px;
+}
+
+#best-friend-theme:hover .overlay {
+height: 14%; /* adjust the height to control the size of the overlay*/
+}
+
+.overlay p {
 color: white;
-padding: 12px 20px;
-border: none;
-cursor: pointer;
-font-size: 16px;
-margin-left: 10px;
-}
-
-.add-scrapbook {
-position: absolute;
-right: 20px;
-top: 20px;
-}
-
-main {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-}
-
-#scrapbook {
-width: 80%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-}
-
-.page {
-background-color: #fff;
-width: 300px;
-height: 400px;
-margin: 20px;
-padding: 20px;
-box-shadow: 0 0 10px #ccc;
-overflow: hidden;
-position: relative;
-transition: all 0.5s ease;
-}
-
-.content img {
-width: 100%;
-height: auto;
-object-fit: cover;
-}
-
-.content p {
-position: absolute;
-bottom: 20px;
-left: 20px;
-right: 20px;
-font-size: 14px;
-color: #fff;
-background-color: rgba(0, 0, 0, 0.5);
-padding: 10px;
+font-size: 20px;
 margin: 0;
+padding: 10px;
+text-align: center;
 }
 
-.add-page {
-display: none;
+#season-theme{
+    position: relative;
 }
 
-.add-form {
+#season-theme:hover .overlay {
+height: 14%; /* adjust the height to control the size of the overlay*/
+}
+
+#travel-theme{
+    position: relative;
+}
+
+#travel-theme:hover .overlay {
+height: 14%; /* adjust the height to control the size of the overlay*/
+}
+
+#pet-theme{
+    position: relative;
+}
+
+#pet-theme:hover .overlay {
+height: 14%; /* adjust the height to control the size of the overlay*/
+}
+
+#beach-theme{
+    position: relative;
+}
+
+#beach-theme:hover .overlay {
+height: 14%; /* adjust the height to control the size of the overlay*/
+}
+
+#features {
+    padding: 50px;
+    text-align: center;
+}
+
+#features h2 {
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+#features p {
+font-size: 18px;
+line-height: 1.5;
+margin-bottom: 40px;
+}
+
+.feature-container {
 display: flex;
-flex-wrap: wrap;
-align-items: center;
 justify-content: center;
+align-items: center;
+flex-wrap: wrap;
 }
 
-.add-form input[type="text"], .add-form textarea {
-margin: 10px;
-padding: 12px 20px;
-border: none;
-border-radius: 4px;
-background-color: #f1f1f1;
-width: 60%;
+.feature {
+width: 300px;
+margin: 20px;
+text-align: left;
 }
 
-.add-form input[type="file"] {
-margin: 10px;
-padding: 12px 20px;
-border: none;
-border-radius: 4px;
-background-color: #f1f1f1;
-width: 20%;
+.feature img {
+width: 100%;
+margin-bottom: 20px;
 }
 
-.submit-form {
-margin-top: 10px;
-width: 20%;
+.feature h3 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.feature p {
+font-size: 18px;
+line-height: 1.5;
+}
+
+footer {
+background-color: #333333;
+color: #ffffff;
+padding: 20px 0;
+text-align: center;
+
+}
+
+footer .container1 {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+
+}
+
+footer nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+footer nav ul li {
+margin-right: 20px;
+}
+
+footer nav ul li a {
+color: #ffffff;
+text-decoration: none;
+}
+
+footer .social-icons {
+display: flex;
+}
+
+footer .social-icons a {
+margin-right: 10px;
+color: #ffffff;
+}
+
+footer .social-icons i {
+    font-size: 20px;
+}
+
+footer p {
+  margin: 0;
 }
